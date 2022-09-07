@@ -1,0 +1,208 @@
+\documentclass[12pt,oneside]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   Zusaetzliche Pakete  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{enumerate}  
+\usepackage{fancyhdr}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{palatino}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{acronym}% http://ctan.org/pkg/acronym
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+
+%folgende Zeile auskommentieren für englische Arbeiten
+\usepackage[ngerman]{babel}
+%folgende Zeile auskommentieren für deutsche Arbeiten
+%\usepackage[ngerman, english]{babel}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bookmarks]{hyperref}
+\usepackage[justification=centering]{caption}
+\usepackage[style=authoryear,natbib=true,backend=biber,maxbibnames=20]{biblatex}
+\usepackage{csquotes}
+\bibliography{literatur}
+
+\setlength{\parindent}{0em} 
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
+\newcommand{\subsubsubsection}[1]{\paragraph{#1}\mbox{}\\}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Definition der Kopfzeile %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+\setlength{\headheight}{16pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Deckblatt (Platzhalter)  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+%Platzhalter für späteres Deckblatt
+\hspace{-2cm}\includegraphics{Deckblatt.pdf}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Beginn des Dokuments  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\lhead{}
+\pagenumbering{Roman} 
+    \setcounter{page}{1}
+
+\tableofcontents
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Kurzzusammenfassung   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lhead{Zusammenfassung}
+\section*{Zusammenfassung}
+\addcontentsline{toc}{section}{Zusammenfassung}
+
+In dieser Arbeit soll das Thema der forensischen Analyse von schädlicher Software behandelt werden. Explizit ist damit gemeint, dass eine Umgebung für diese Untersuchung in wenigen Sekunden geschaffen werden kann, welche den nötigen Sicherheitsstandards entspricht und so eine sichere Beobachtung des Malwareverhaltens gewährleisten kann. Diese Umgebung soll unabhängig vom Anbieter mit den selben Werkzeugen erstellt werden. So kann im Notfall schnell gehandelt werden, um festzustellen, welche Systemkomponenten von einem Angriff gefährdet sind.
+\newline Somit ist diese Arbeit im Bereich der IT-Security und Datensicherheit anzusiedeln. Dies sind in der heutigen Zeit wichtige Themenbereiche um den Schutz aller Daten bieten zu können.
+
+\newpage
+\lhead{Abstract}
+\section*{Abstract}
+\addcontentsline{toc}{section}{Abstract}
+
+
+
+\newpage
+\lhead{Abbildungsverzeichnis} 
+\addcontentsline{toc}{section}{Abbildungsverzeichnis} 
+\listoffigures
+
+\newpage
+\lhead{Tabellenverzeichnis}
+\addcontentsline{toc}{section}{Tabellenverzeichnis} 
+\listoftables
+\newpage
+
+\setlength{\parskip}{0.5em} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Definition der Abkürzungen  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lhead{Abkürzungsverzeichnis} 
+\section*{Abkürzungsverzeichnis} 
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}  
+
+\begin{acronym}
+ \acro{VM}{Virtuelle Maschine}
+\end{acronym}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Glossar  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lhead{Glossar} 
+\section*{Glossar} 
+\addcontentsline{toc}{section}{Glossar}  
+\begin{acronym}
+ \acro{Virtuelle Maschine}{- Virtuelle Maschinen sind[...]}
+ \acro{}{}
+\end{acronym}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Einstellungen  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}  
+    \setcounter{page}{1}
+\lhead{\nouppercase{\leftmark}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Hauptteil  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lhead{Einleitung}
+\section{Einleitung} 
+\subsection{Fragestellung}
+\subsection{Forschungsstand}
+\subsection{Aufbau der Arbeit}
+\newpage
+
+\lhead{Theoretische Grundlagen}
+\section{Theoretische Grundlagen} 
+\subsection{Terraform}
+\subsubsection{Funktionsweise}
+\textit{Terraform} ist ein \textit{open source tool}, welches die Vorbereitung von \textit{Cloud Servern} einfacher macht. Es wurde von HashiCorp dazu entwickelt, Infrastrukturen vorzubereiten und zu verwalten.
+\subsubsection{Vorteile}
+\subsection{Virtuelle Maschinen}
+\subsubsection{Was ist eine virtuelle Maschine?}
+\subsubsection{Erstellen einer virtuellen Maschine}
+\subsubsection{Absicherung einer virtuellen Maschine}
+\subsection{Malware}
+\subsubsection{Was ist Malware?}
+\subsubsection{Arten von Malware}
+\subsection{Malware-Analyse}
+\subsubsection{Einfache statische Analyse}
+\subsubsection{Einfache dynamische Analyse}
+\subsubsection{Erweiterte statische Analyse}
+\subsubsection{Erweiterte dynamische Analyse}
+\newpage
+
+\lhead{Methodik}
+\section{Methodik}
+\subsection{Terraform}
+\subsection{Virtuelle Umgebung}
+\subsection{Tools}
+\subsection{Malware}
+\newpage
+
+\lhead{Ergebnisse}
+\section{Ergebnisse}
+\newpage
+
+\lhead{Bewertung der Ergebnisse}
+\section{Bewertung des Ergebnisses}
+\subsection{Vorteile der Vorgehensweise}
+\subsection{Nachteile der Vorgehensweise}
+\newpage
+
+\lhead{Diskurs}
+\section{Diskurs}
+\subsection{Schlussbetrachtung}
+\subsection{Ausblick}
+\newpage 
+
+\lhead{Literaturverzeichnis}
+\section{Literaturverzeichnis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Literaturverzeichnis wird 
+%% automatisch eingefügt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\lhead{}
+\printbibliography
+\addcontentsline{toc}{section}{literatur.bib}
+\newpage
+
+\lhead{Anhang}
+\section{Anhang}
+\appendix
+\section{Anhang A} 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Eidesstattliche Erklärung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\input{Erklaerung.tex}
+
+\end{document}
