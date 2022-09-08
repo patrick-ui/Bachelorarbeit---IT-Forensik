@@ -113,8 +113,9 @@ In dieser Arbeit soll das Thema der forensischen Analyse von schädlicher Softwa
 \section*{Glossar} 
 \addcontentsline{toc}{section}{Glossar}  
 \begin{acronym}
- \acro{Virtuelle Maschine}{- Virtuelle Maschinen sind[...]}
- \acro{}{}
+ \acro{Virtuelle Maschine}{- Virtuelle Maschinen sind ...}
+ \acro{Open-Source-Software}{- Ein Open-Source-Software ...}
+ \acro{Cloud Server}{- Ein Cloud Server ist ...}
 \end{acronym}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Einstellungen  %%
@@ -129,25 +130,67 @@ In dieser Arbeit soll das Thema der forensischen Analyse von schädlicher Softwa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lhead{Einleitung}
 \section{Einleitung} 
+-
 \subsection{Fragestellung}
+-am ende entscheiden ob der punkt drin bleibt oder nicht
 \subsection{Forschungsstand}
+-nennung von Messen wie bspw. defcon
+\newline
+-publikationen aus exposé-quellen einbeziehen
 \subsection{Aufbau der Arbeit}
+-von welchem Thema gehe ich zu welchem thema um roten faden darzulegen
 \newpage
 
 \lhead{Theoretische Grundlagen}
 \section{Theoretische Grundlagen} 
 \subsection{Terraform}
 \subsubsection{Funktionsweise}
-\textit{Terraform} ist ein \textit{open source tool}, welches die Vorbereitung von \textit{Cloud Servern} einfacher macht. Es wurde von HashiCorp dazu entwickelt, Infrastrukturen vorzubereiten und zu verwalten.
+\textit{Terraform} ist eine \textit{Open-Source-Software}, welche die Vorbereitung von \textit{Cloud Servern} einfacher macht. Sie wurde von HashiCorp dazu entwickelt, Infrastrukturen vorzubereiten und zu verwalten.\footcite{introform} Mit Infrastrukturen sind hier virtuelle Maschinen verschiedenster Anbieter gemeint.\footnote{\cite{Terraform}} Terraform hat lizenzierte Partner für die seine Dienste anwendbar sind.\footcite{TerraProviders} Durch die hohe Konnektivität dieser Software sind die Einsatzorte sehr vielseitig. Das macht die Software natürlich auch in der Entwicklung und im Betrieb innerhalb von Unternehmen sehr attraktiv. 
 \subsubsection{Vorteile}
+-schnell
+\newline
+-variabel
+\newline
+-nicht allzu komplex
 \subsection{Virtuelle Maschinen}
 \subsubsection{Was ist eine virtuelle Maschine?}
+-Anwendungsumgebung
+\newline
+-Hardware imitiert
+
 \subsubsection{Erstellen einer virtuellen Maschine}
+-terraform einbringen und allgemeines vorgehen beschreiben wie es ohne terraform wäre
+\newline
+-überleitung absicherung
 \subsubsection{Absicherung einer virtuellen Maschine}
+-firewall 
+\newline
+-was für absicherungen sollten getroffen werden
+\newline
+-firewall konfiguration erklären
 \subsection{Malware}
 \subsubsection{Was ist Malware?}
+-Schadcode 
+\newline
+-wurde dazu entwickelt schaden anzurichten
+\newline
+-nicht politisch werden!!! (nicht gru mit einbeziehen)
 \subsubsection{Arten von Malware}
+-virus
+\newline
+-Würmer
+\newline
+-trojaner
+\newline
+-Spyware
+\newline
+-Scareware
+\newline
+-Ransomware
+\newline
+-alle kurz anschneiden aber nicht zu tief
 \subsection{Malware-Analyse}
+- in den unteren 4 Punkten die Malwareanalyse erklären und auch den forschungsstand mit einbeziehen
 \subsubsection{Einfache statische Analyse}
 \subsubsection{Einfache dynamische Analyse}
 \subsubsection{Erweiterte statische Analyse}
@@ -157,9 +200,15 @@ In dieser Arbeit soll das Thema der forensischen Analyse von schädlicher Softwa
 \lhead{Methodik}
 \section{Methodik}
 \subsection{Terraform}
+- configs zeigen und einzelne befehle erklären: warum mache ich was
 \subsection{Virtuelle Umgebung}
+-was habe ich wo und wie gemacht
+\newline
+-mit screenshots dokumentieren und untermauern an passenden stellen
 \subsection{Tools}
+- UNBEDINGT RANSETZEN
 \subsection{Malware}
+- kurze Erklärung, dass ich Malware hab
 \newpage
 
 \lhead{Ergebnisse}
