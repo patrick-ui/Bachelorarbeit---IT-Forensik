@@ -21,11 +21,23 @@ resource "hcloud_firewall" "myfirewall" {
     ]
   }
 
+rule {
+    direction = "out"
+    protocol  = "tcp"
+    port = "22"
+    destination_ips = [
+      #host
+      "0.0.0.0/0",
+      "::/0" 
+    ]
+  }
+
   rule {
     direction = "in"
     protocol  = "tcp"
     port      = "22"
     source_ips = [
+      #host
       "0.0.0.0/0",
       "::/0"
     ]
@@ -33,8 +45,8 @@ resource "hcloud_firewall" "myfirewall" {
 
 }
 
-resource "hcloud_server" "node1" {
-  name         = "node1"
+resource "hcloud_server" "forensics" {
+  name         = "forensics"
   image        = "debian-9"
   server_type  = "cx11"
   firewall_ids = [hcloud_firewall.myfirewall.id]
