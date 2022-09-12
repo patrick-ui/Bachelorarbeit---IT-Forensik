@@ -68,13 +68,11 @@
 %%  Kurzzusammenfassung   %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lhead{Zusammenfassung}
-\section*{Zusammenfassung}
+%\section*{Zusammenfassung}
 \addcontentsline{toc}{section}{Zusammenfassung}
-
-In dieser Arbeit soll das Thema der forensischen Analyse von schädlicher Software behandelt werden. Explizit ist damit gemeint, dass eine Umgebung für diese Untersuchung in wenigen Sekunden geschaffen werden kann, welche den nötigen Sicherheitsstandards entspricht und so eine sichere Beobachtung des Malwareverhaltens gewährleisten kann. Diese Umgebung soll unabhängig vom Anbieter mit den selben Werkzeugen erstellt werden. So kann im Notfall schnell gehandelt werden, um festzustellen, welche Systemkomponenten von einem Angriff gefährdet sind.
-\newline Somit ist diese Arbeit im Bereich der IT-Security und Datensicherheit anzusiedeln. Dies sind in der heutigen Zeit wichtige Themenbereiche um den Schutz aller Daten bieten zu können.
-
 \newpage
+\include{Zusammenfassung.tex}
+
 \lhead{Abstract}
 \section*{Abstract}
 \addcontentsline{toc}{section}{Abstract}
@@ -110,13 +108,9 @@ In dieser Arbeit soll das Thema der forensischen Analyse von schädlicher Softwa
 %%  Glossar  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lhead{Glossar} 
-\section*{Glossar} 
+%\section*{Glossar} 
 \addcontentsline{toc}{section}{Glossar}  
-\begin{acronym}
- \acro{Virtuelle Maschine}{- Virtuelle Maschinen sind ...}
- \acro{Open-Source-Software}{- Ein Open-Source-Software ...}
- \acro{Cloud Server}{- Ein Cloud Server ist ...}
-\end{acronym}
+\include{Glossar.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Einstellungen  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -227,18 +221,21 @@ In dieser Arbeit soll das Thema der forensischen Analyse von schädlicher Softwa
 \subsection{Ausblick}
 \newpage 
 
-\lhead{Literaturverzeichnis}
-\section{Literaturverzeichnis}
+
+\lhead{Literatur- und Quellenverzeichnis}
+\section{Literatur- und Quellenverzeichnis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Literaturverzeichnis wird 
 %% automatisch eingefügt
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\clearpage
-\lhead{}
-\printbibliography
-\addcontentsline{toc}{section}{literatur.bib}
-\newpage
 
+\printbibliography
+\addcontentsline{toc}{section}{Literatur- und Quellenverzeichnis}
+aufteilen in internetquellen
+publications
+books
+
+\newpage
 \lhead{Anhang}
 \section{Anhang}
 \appendix
