@@ -1,0 +1,12 @@
+\begin{otherlanguage}{ngerman}
+\subsection{Terraform}\label{Praktisches Terraform}
+Für diese Arbeit wird Terraform als Konfigurationstool für die erstellten Server verwendet. Um eine sichere virtuelle Umgebung zu schaffen werden zwei Server benötigt. Ein Server bearbeitet DNS-Anfragen und der andere Server ist mit Malwareanalyse-Tools ausgestattet. Zudem sind keine Verbindungen zugelassen, außer Port 22. Dieser ist der SSH-Port und bietet hier die Möglichkeit den Server von außen zu beobachten. Ansonsten besteht die Möglichkeit für den Analyseserver, dass er sich mit dem DNS Server verbindet. Das ist daher nötig, da Malware teilweise nur mit Internetverbindung funktioniert. Diese wird über die Verbindung zum DNS Server hergestellt. 
+\newline
+Für die Umsetzung dieses Konzeptes bedarf es Terraformdateien, welche die entsprechenden Serverkonfigurationen und Abhängigkeiten festlegen.
+\newline
+- configs zeigen und einzelne befehle erklären: warum mache ich was
+\subsection{Virtuelle Umgebung}
+-was habe ich wo und wie gemacht
+\newline
+-mit screenshots dokumentieren und untermauern an passenden stellen
+\end{otherlanguage}

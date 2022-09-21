@@ -97,12 +97,10 @@
 %%  Definition der Abkürzungen  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lhead{Abkürzungsverzeichnis} 
-\section*{Abkürzungsverzeichnis} 
-\addcontentsline{toc}{section}{Abkürzungsverzeichnis}  
 
-\begin{acronym}
- \acro{VM}{Virtuelle Maschine}
-\end{acronym}
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}  
+\include{Abkuerzungsverzeichnis.tex}
+
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Glossar  %%
@@ -147,12 +145,7 @@
 
 \lhead{Methodik}
 \section{Methodik}
-\subsection{Terraform}\label{Praktisches Terraform}
-- configs zeigen und einzelne befehle erklären: warum mache ich was
-\subsection{Virtuelle Umgebung}
--was habe ich wo und wie gemacht
-\newline
--mit screenshots dokumentieren und untermauern an passenden stellen
+\include{MetTerraform.tex}
 \include{Tools.tex}
 
 \lhead{Ergebnisse}
@@ -166,9 +159,7 @@
 \newpage
 
 \lhead{Diskurs}
-\section{Diskurs}
-\subsection{Schlussbetrachtung}
-\subsection{Ausblick}
+\include{Diskurs.tex}
 \newpage 
 
 

@@ -6,23 +6,42 @@
 \newline
 Terraform ist ein Infrastructure-as-Code-Tool und wird für die Bereitstellung von physischen als auch virtuellen Servern verwendet. Das Tool arbeitet mit Konfigurationsdateien, die in der HashiCorp Configuration Language(HCL) geschrieben werden. Die genannten Dateien sind von Menschen lesbar und gewährleisten dadurch die geringe Komplexität der Sprache. Zudem ist HCL eine deklarative Sprache. Das heißt, dass der Nutzer den Wunschaufbau des Servers in der Terraform-Datei beschreibt. Die einzelnen Schritte um den gewünschten Serverzustand zu erreichen werden von Terraform übernommen. 
 \newline
-Die Prozesse in die die Arbeit mit Terraform unterschieden werden kann, sind in drei Schritte aufgeteilt. Der erste Schritt ist \tt write \rm. In dieser Phase wird der Code definiert. Dafür werden die benötigten Ressourcen für die jeweiligen Provider definiert. Dafür Terraform-Konfigurations-Dateien mit der Endung \tt .tf \rm verwendet. Aus diesen Dateien entnimmt Terraform beispielsweise welcher Cloud-Anbieter verwendet wird. Als Beispiel für einen Anbieter mit dem Terraform funktioniert können die Microsoft Azure-Dienste genannt werden. Zu den Providern findet sich auf der Seite von Terraform eine jeweilige Dokumentation darüber, wie die Ressourcen einzubinden sind. Der Code der Konfigurations-Dateien entscheidet darüber, wie der Server konfiguriert wird, wenn dass script ausgeführt wird. 
+Die Prozesse in die die Arbeit mit Terraform unterschieden werden kann, sind in drei Schritte aufgeteilt. Der erste Schritt ist \tt write \rm. In dieser Phase wird der Code definiert. Dafür werden die benötigten Ressourcen für die jeweiligen Provider definiert. Dafür Terraform-Konfigurations-Dateien mit der Endung \tt .tf \rm verwendet. Aus diesen Dateien entnimmt Terraform beispielsweise welcher Cloud-Anbieter verwendet wird. Als Beispiel für einen Anbieter mit dem Terraform funktioniert kann die \dq Hetzner-Cloud \dq{} genannt werden. Zu den Providern findet sich auf der Seite von Terraform eine jeweilige Dokumentation darüber, wie die Ressourcen einzubinden sind. Der Code der Konfigurations-Dateien entscheidet darüber, wie der Server konfiguriert wird, wenn dass Skript ausgeführt wird. 
+\newline
+\begin{figure}[h]
+    \centering
+    \includegraphics{LaTeX/graphic/TFArg.png}
+    \caption{Terraform - Argument}
+\end{figure}
+\newline
+In der obigen Abbildung ist die allgemeine Syntax eines Argumentes in Terraform dargestellt. Ein Argument ist ein Name dem ein Wert zugewiesen wird. Die Art dieses Wertes in vom Kontext abhängig in dem das Argument erstellt wird.
+\begin{figure}[h]
+    \centering
+    \includegraphics{LaTeX/graphic/TFBlock.png}
+    \caption{Terraform - Block}
+\end{figure}
+\newline
+\newline
+In dieser Abbildung ist der allgemeine Aufbau eines Blocks in Terraform zu erkennen. Ein Block beginnt mit dem \tt type \rm . Er legt auch fest welche und wie viele sogennante Bezeichner folgen müssen. Der Inhalt des Blocks befindet sich in geschweiften Klammern. In diesen Klammern sind zusätzliche Argumente zu finden. Diese bestimmen die Abhängigkeiten und die Zusammenhänge mit anderen Blocks und Argumenten. In diesem Beispiel ist der Typ des Blocks ein Server in der \dq Hetzner-Cloud\dq{}. Dieser verlangt als weiteren Bezeichner einen Namen. Innerhalb des Blocks ist zudem die Abhängigkeit von der Firewall zu erkennen.
 \newline
 Wenn der Code verfasst wurde folgt der nächste Schritt im Arbeitsablauf von Terraform. Dieser ist die Planung der vorgenommenen Aktionen. Wird \tt terraform apply \rm in der Kommandozeile eingegeben so wird dieser Plan erstellt. Dieser wird im Anschluss daran ausgegeben. Um Fortzufahren muss der Plan, indem jeder Schritt aufgelistet ist, den Terraform durchführen wird, bestätigt werden. Diese einzelnen Schritte können Änderungen, Löschungen oder das Hinzufügen von Dateien sein.
-\begin{figure}
+\newline
+\begin{figure}[h]
     \centering
     \includegraphics{LaTeX/graphic/terraformapply.png}
     \caption{Terraform - Planungsphase}
 \end{figure}
 %\includegraphics[]{LaTeX/graphic/terraformapply.png}
-
-\newpage 
-Die Dritte und letzte Phase im Terraform-Workflow ist \tt apply \rm. Sie beginnt mit der Bestätigung des Plans. Ab diesem Zeitpunkt beginnt Terraform mit der Bereitstellung des Servers. Welche Systemkomponenten und Sicherheitseinstellungen dieser hat ist von den Konfigurationsdateien abhängig. 
+\newline 
+ 
+Die Dritte und letzte Phase im Terraform-\it Workflow \rm ist \tt apply\rm. Sie beginnt mit der Bestätigung des Plans. Ab diesem Zeitpunkt beginnt Terraform mit der Bereitstellung des Servers. Welche Systemkomponenten und Sicherheitseinstellungen dieser hat ist von den Konfigurationsdateien abhängig. 
 
 \subsubsection{Vorteile}
--schnell
+Terraform birgt einige nützliche Vorteile. Einer dieser ist die Flexibilität. Terraform ist ein großes Provisioning-Tool und hat viele Partner in Form von Providern. Diese Provider lassen eine Servererstellung mittels Terraform zu. So kann beispielsweise eine Konfiguration für einen Hetzner-Server mit wenigen Änderungen verwendet werden um eine virtuelle Umgebung bei \dq Oracle \dq{} zu erstellen. Diese Flexibilität ist besonders für dieses Projekt interessant, denn so kann die virtuelle Umgebung bei verschiedenen Anbietern identisch konfiguriert und verwendet werden. 
+\newline 
+Ein weiterer Vorteil der sich daraus ergibt ist, dass Terraform sehr schnell ist. Mit den Befehlen \tt init\rm und \tt apply\rm wird nach Bestätigung eine virtuelle Umgebung mit den gewünschten Konfigurationen erstellt. Dies ist gegenüber dem manuellen Einrichten einer virtuellen Umgebung sehr zeitsparend. 
 \newline
--variabel
+Hinzu kommt, dass Terraform gut zu verstehen ist. Die Sprache in der die Konfigurationsdateien geschrieben ist, ist sehr intuitiv und gut verständlich. Wenn die Syntax einmal begriffen wurde lässt sich aus den Konfigurationsdateien gut auf das Endprodukt schließen. Natürlich sind virtuelle Umgebungen die von Grund auf komplex sind auch in Terraform komplex. Dennoch ist die Verständlichkeit der Sprache eine positive Anmerkung Wert.
 \newline
--nicht allzu komplex
+Weiterhin ist für IT-Teams die Planungsphase ein gutes Tool um Veränderungen bereits im Vorweg zu sehen und Folgen abschätzen zu können. Dabei können Fehler die zu einem unerwünschten Ergebnis führen frühzeitig erkannt und vermieden werden. Zudem ist die Möglichkeit Server über Terraform zu verwalten sehr attraktiv, um schnelle und bedachte Änderungen an der Umgebung vorzunehmen.
 \end{otherlanguage}
