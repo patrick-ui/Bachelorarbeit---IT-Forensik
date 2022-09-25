@@ -15,6 +15,10 @@
 \usepackage{enumitem}% http://ctan.org/pkg/enumitem
 \usepackage{pythonhighlight}
 \usepackage{listings}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{pgf} 
+\usepackage{pythonhighlight}
 %folgende Zeile auskommentieren für englische Arbeiten
 \usepackage[ngerman]{babel}
 %folgende Zeile auskommentieren für deutsche Arbeiten
@@ -64,7 +68,9 @@
 
 \tableofcontents
 \clearpage
-
+%Gendererklärung
+\addcontentsline{toc}{section}{Gendererklärung}
+\include{Gender.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%  Kurzzusammenfassung   %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -122,16 +128,8 @@
 %%  Hauptteil  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lhead{Einleitung}
-\section{Einleitung} 
--
-\subsection{Fragestellung}
--am ende entscheiden ob der punkt drin bleibt oder nicht
-\subsection{Forschungsstand}
--nennung von Messen wie bspw. defcon
-\newline
--publikationen aus exposé-quellen einbeziehen
-\subsection{Aufbau der Arbeit}
--von welchem Thema gehe ich zu welchem thema um roten faden darzulegen
+%Einleitung
+\include{Einleitung.tex}
 
 
 \lhead{Theoretische Grundlagen}
@@ -150,18 +148,16 @@
 \include{Tools.tex}
 
 \lhead{Ergebnisse}
-\section{Ergebnisse}
-\newpage
+%Ergebnisse
+\include{Ergebnisse.tex}
 
-\lhead{Bewertung der Ergebnisse}
-\section{Bewertung des Ergebnisses}
-\subsection{Vorteile der Vorgehensweise}
-\subsection{Nachteile der Vorgehensweise}
-\newpage
 
-\lhead{Diskurs}
-\include{Diskurs.tex}
-\newpage 
+\lhead{Diskussion}
+%Diskussion
+\include{Diskussion.tex}
+\lhead{Fazit}
+%Fazit
+\include{Fazit.tex}
 
 
 \lhead{Literatur- und Quellenverzeichnis}
